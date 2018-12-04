@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 60154598379503986}
   - component: {fileID: 50318242566757052}
   m_Layer: 0
-  m_Name: Viking2_0
+  m_Name: playerPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
