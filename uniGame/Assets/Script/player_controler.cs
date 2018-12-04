@@ -9,26 +9,32 @@ public class player_controler : MonoBehaviour {
 	public KeyCode spacebar;
 	public KeyCode L;
 	public KeyCode R;
-	public Transform groundCheck;
+    public KeyCode F;
+    public Transform groundCheck;
 	public float groundCheckRadius;
 	public LayerMask whatIsGround;
 	private bool grounded;
-public float x,y,z;
+    public float x,y,z;
+    private Animator idle, run, dash;
+    public Animator AniController;
+    private bool hit;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		x=transform.localScale.x;
 		y=transform.localScale.y;
 		z=transform.localScale.z;
 		isFacingRight=true;
-	}
+        idle = AniController;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(spacebar)&& grounded){
 			jump();
 		}
-		if (Input.GetKey(L)){
+        idle.SetBool("grounded", grounded);
+        if (Input.GetKey(L)){
 			GetComponent<Rigidbody2D>().velocity=new Vector2(-moveSpeed,GetComponent<Rigidbody2D>().velocity.y);
 			if (isFacingRight){
 				flip();
@@ -42,7 +48,12 @@ public float x,y,z;
 				isFacingRight=true;
 			}
 		}
-	}
+        if (Input.GetKey(F))
+        {
+            idle.SetTrigger("hit");
+        };
+        idle.SetFloat("speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+    }
 	void jump(){
 		GetComponent<Rigidbody2D>().velocity=new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight);
 	}
