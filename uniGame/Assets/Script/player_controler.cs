@@ -33,7 +33,7 @@ public class player_controler : MonoBehaviour {
 		if(Input.GetKeyDown(spacebar)&& grounded){
 			jump();
 		}
-        idle.SetBool("grounded", grounded);
+        idle.SetBool("Grounded?", grounded);
         if (Input.GetKey(L)){
 			GetComponent<Rigidbody2D>().velocity=new Vector2(-moveSpeed,GetComponent<Rigidbody2D>().velocity.y);
 			if (isFacingRight){
