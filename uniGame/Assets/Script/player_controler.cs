@@ -18,6 +18,8 @@ public class player_controler : MonoBehaviour {
     private Animator idle, run, dash;
     public Animator AniController;
     private bool hit;
+    public AudioClip hitSound;
+    public AudioClip walkSound;
 
     // Use this for initialization
     void Start () {
@@ -40,6 +42,7 @@ public class player_controler : MonoBehaviour {
 				flip();
 				isFacingRight=false;
 			}
+            AudioManager.instance.playSingle(walkSound);
 		}
 		if (Input.GetKey(R)){
 			GetComponent<Rigidbody2D>().velocity=new Vector2(moveSpeed,GetComponent<Rigidbody2D>().velocity.y);
@@ -47,10 +50,12 @@ public class player_controler : MonoBehaviour {
 				flip();
 				isFacingRight=true;
 			}
-		}
+            AudioManager.instance.playSingle(walkSound);
+        }
         if (Input.GetKey(F))
         {
             idle.SetTrigger("hit");
+            AudioManager.instance.playSingle(hitSound);
         };
         idle.SetFloat("speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
     }
