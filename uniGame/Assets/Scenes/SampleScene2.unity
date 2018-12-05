@@ -334,6 +334,10 @@ Prefab:
       propertyPath: walkSound
       value: 
       objectReference: {fileID: 8300000, guid: 5e4e94919f27fc04b9e12d52f7d18464, type: 3}
+    - target: {fileID: 1727191992202298, guid: f8a4c33f7dc883f43bf22804f565a352, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a4c33f7dc883f43bf22804f565a352, type: 2}
   m_IsPrefabAsset: 0
