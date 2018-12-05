@@ -9,6 +9,8 @@ public class enemyController : MonoBehaviour {
     public int damage = 6;
     //public AudioClip hit1;
     //public AudioClip hit2;
+    public Animator idle, run, dash;
+    public Animator AniController;
 
     public void flip()
     {
@@ -30,12 +32,12 @@ public class enemyController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
+        idle = AniController;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        idle.SetFloat("speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
     }
 }
