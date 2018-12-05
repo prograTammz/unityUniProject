@@ -20,6 +20,7 @@ public class player_controler : MonoBehaviour {
     private bool hit;
     public AudioClip hitSound;
     public AudioClip walkSound;
+    public int totalCoin;
 
     // Use this for initialization
     void Start () {
