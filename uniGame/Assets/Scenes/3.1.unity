@@ -955,6 +955,16 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114908892234700378, guid: f8a4c33f7dc883f43bf22804f565a352,
+        type: 2}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0bab2f9cb0895bd43aa897260cea64bf, type: 3}
+    - target: {fileID: 114908892234700378, guid: f8a4c33f7dc883f43bf22804f565a352,
+        type: 2}
+      propertyPath: walkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: bbad1571e422f6c45bf8eb4ecf9fee7f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a4c33f7dc883f43bf22804f565a352, type: 2}
   m_IsPrefabAsset: 0
