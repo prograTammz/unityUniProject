@@ -5,6 +5,7 @@ using UnityEngine;
 public class coin : MonoBehaviour
 {
     public int coin_value;
+
     // Use this for initialization
     void Start()
     {
@@ -20,8 +21,13 @@ public class coin : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            
             FindObjectOfType<player_controler>().totalCoin += coin_value;
             Destroy(this.gameObject);
         }
+       
     }
+
+    
+ 
 }
