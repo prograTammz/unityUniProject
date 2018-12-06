@@ -7,7 +7,7 @@ public class Spikes : MonoBehaviour {
     // Use this for initialization
     void OnTriggerEnter2D(Collider2D Other)
     {
-        if (Other.name == "Player")
+        if (Other.tag == "Player")
             FindObjectOfType<LevelManager>().RespawnPlayer();
     }
     void Start ()
