@@ -18,8 +18,10 @@ public class KillEnemy : MonoBehaviour
         if (X.tag == "Enemy")
         {
             FindObjectOfType<WalkingEnemy>().takeDamage(6);
+            
         }
     }
+    
 
     // Update is called once per frame
     void Update()
