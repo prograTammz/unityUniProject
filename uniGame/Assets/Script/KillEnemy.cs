@@ -23,7 +23,7 @@ public class KillEnemy : MonoBehaviour
                 scene4Counter++;
                 if(scene4Counter == 10)
                 {
-
+                    (new navigationController()).goLevel(5);
                 }
             }
             else if (X.name == "Hendrick - prefab")
