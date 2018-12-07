@@ -81,8 +81,8 @@ public class PlayerStats : MonoBehaviour {
     }
     void Update () {
        
-        //scoreUI.text = "" + coinsCollected;
-        //healthUI.value = health;
+        scoreUI.text = "" + coinsCollected;
+        healthUI.value = health;
     }
     public void collectCoin(int coinValue)
     {
