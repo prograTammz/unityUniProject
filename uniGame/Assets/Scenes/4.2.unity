@@ -4855,7 +4855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  jumpHeight: 10
+  jumpHeight: 4
   isFacingRight: 1
   spacebar: 32
   L: 276

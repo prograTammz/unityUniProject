@@ -73,8 +73,7 @@ public class PlayerStats : MonoBehaviour {
             AudioManager.instance.playSingle(Die);
             AudioManager.instance.musicSource.Stop();
             Destroy(gameObject);
-            //Destroy(this.gameObject);
-            //(new navigationController()).goToGameOverScene();
+            (new navigationController()).goToGameOverScene();
         }
             Debug.Log("Player Health: " + this.health.ToString());
             Debug.Log("Player Lives: " + this.lives.ToString());
