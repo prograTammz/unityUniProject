@@ -15,12 +15,12 @@ public class navigationController : MonoBehaviour {
 
     public void goToGameOverScene()
     {
-        Application.LoadLevel(0);
+        Application.LoadLevel(6);
     }
 
     public void goToVictoryScene()
     {
-        Application.LoadLevel(6);
+        Application.LoadLevel(5);
     }
 
     public void Quit()
