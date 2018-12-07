@@ -15,7 +15,6 @@ public class PlayerStats : MonoBehaviour {
     public float immunityDuration = 1.5f;
     public int coinsCollected = 0;
     public AudioClip gameOverSound;
-    public bool isDied = false;
     public Text scoreUI;
     public Slider healthUI;
     public Animator Ani;
@@ -73,8 +72,7 @@ public class PlayerStats : MonoBehaviour {
             //AudioManager.instance.playSingle(gameOverSound);
             AudioManager.instance.playSingle(Die);
             AudioManager.instance.musicSource.Stop();
-            Ani.SetTrigger("Die");
-            this.isDied = true;
+            Destroy(gameObject);
             //Destroy(this.gameObject);
             //(new navigationController()).goToGameOverScene();
         }

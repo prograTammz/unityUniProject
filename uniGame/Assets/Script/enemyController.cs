@@ -46,8 +46,9 @@ public class enemyController : MonoBehaviour {
         Debug.Log(this.health);
         if(this.health  <= 0)
         {
-            //Destroy(this.gameObject);
+           
             idle.SetTrigger("Die");
+            Destroy(this.gameObject);
             AudioManager.instance.playSingle(Die);
             this.isDied = true;
         }
