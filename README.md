@@ -1,4 +1,5 @@
 # The sin and the soreness
+![Alt text](https://github.com/prograTammz/unityUniProject/blob/master/uniGame/Assets/WhatsApp%20Image%202018-12-06%20at%208.17.17%20PM.jpeg)
 ### Game Overview:
 #### Genre
 	- Adventure/Action.
