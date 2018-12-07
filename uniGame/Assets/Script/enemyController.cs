@@ -7,6 +7,8 @@ public class enemyController : MonoBehaviour {
     public bool isFacingRight = false;
     public float maxSpeed = 3f;
     public int damage = 6;
+    public bool isDied=false;
+    public int health = 0;
     //public AudioClip hit1;
     //public AudioClip hit2;
     public Animator idle, run, dash;
@@ -39,5 +41,16 @@ public class enemyController : MonoBehaviour {
     void Update()
     {
         idle.SetFloat("speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+    }
+    public void takeDamage(int damage)
+    {
+        this.health -= damage;
+        Debug.Log(this.health);
+        if(this.health  <= 0)
+        {
+            //Destroy(this.gameObject);
+            idle.SetTrigger("Die");
+            this.isDied = true;
+        }
     }
 }

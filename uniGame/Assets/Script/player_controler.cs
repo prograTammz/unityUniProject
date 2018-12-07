@@ -37,23 +37,24 @@ public class player_controler : MonoBehaviour {
 			jump();
 		}
         idle.SetBool("Grounded?", grounded);
-        if (Input.GetKey(L)){
+        if (Input.GetKey(L) & !GetComponent<PlayerStats>().isDied){
 			GetComponent<Rigidbody2D>().velocity=new Vector2(-moveSpeed,GetComponent<Rigidbody2D>().velocity.y);
 			if (isFacingRight){
 				flip();
 				isFacingRight=false;
 			}
-            AudioManager.instance.playSingle(walkSound);
+            //AudioManager.instance.playSingle(walkSound);
 		}
-		if (Input.GetKey(R)){
+		if (Input.GetKey(R) & !GetComponent<PlayerStats>().isDied)
+        {
 			GetComponent<Rigidbody2D>().velocity=new Vector2(moveSpeed,GetComponent<Rigidbody2D>().velocity.y);
 			if (!isFacingRight){
 				flip();
 				isFacingRight=true;
 			}
-            AudioManager.instance.playSingle(walkSound);
+            //AudioManager.instance.playSingle(walkSound);
         }
-        if (Input.GetKey(F))
+        if (Input.GetKey(F) & !GetComponent<PlayerStats>().isDied)
         {
             idle.SetTrigger("hit");
             AudioManager.instance.playSingle(hitSound);

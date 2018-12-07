@@ -22,19 +22,24 @@ public class WalkingEnemy : enemyController {
         if (collision.tag == "Player")
         {
             FindObjectOfType<PlayerStats>().takeDamage(damage);
+            AniController.SetTrigger("Hit");
             flip();
         }
     }
     private void FixedUpdate()
     {
-        if (this.isFacingRight == true)
+        if (!isDied)
         {
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(maxSpeed, this.GetComponent<Rigidbody2D>().velocity.y);
+            if (this.isFacingRight == true)
+            {
+                this.GetComponent<Rigidbody2D>().velocity = new Vector2(maxSpeed, this.GetComponent<Rigidbody2D>().velocity.y);
+            }
+            else
+            {
+                this.GetComponent<Rigidbody2D>().velocity = new Vector2(-maxSpeed, this.GetComponent<Rigidbody2D>().velocity.y);
+            }
         }
-        else
-        {
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(-maxSpeed, this.GetComponent<Rigidbody2D>().velocity.y);
-        }
+        
     }
 
     // Update is called once per frame

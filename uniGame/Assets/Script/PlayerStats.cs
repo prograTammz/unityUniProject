@@ -15,8 +15,11 @@ public class PlayerStats : MonoBehaviour {
     public float immunityDuration = 1.5f;
     public int coinsCollected = 0;
     public AudioClip gameOverSound;
+    public bool isDied = false;
     public Text scoreUI;
     public Slider healthUI;
+    public Animator Ani;
+    public AudioClip Die;
     // Use this for initialization
     void Start () {
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -31,7 +34,7 @@ public class PlayerStats : MonoBehaviour {
         }
         else if (this.flickerTime >= this.flickerDuration)
         {
-            spriteRenderer.enabled = !(spriteRenderer.enabled);
+            //spriteRenderer.enabled = !(spriteRenderer.enabled);
             this.flickerTime = 0;
         }
 
@@ -45,45 +48,48 @@ public class PlayerStats : MonoBehaviour {
 
     public void takeDamage(int damage)
     {
-        if (this.inImmune == false)
-        {
-            this.health = this.health - damage;
-            if (this.health < 0) this.health = 0;
+        
+        print(damage);
+        print(lives);
+       
+        this.health = this.health - damage;
+            if (this.health < 0) { this.health = 0;  }
             if (this.lives > 0 && this.health == 0)
             {
-                //FindObjectOfType<LevelManager>().RespawnPlayer();
+                
                 this.health = 6;
                 this.lives--;
-            }
-            else if (this.lives == 0 && this.health == 0)
+                Ani.SetTrigger("Die");
+            AudioManager.instance.playSingle(Die);
+            FindObjectOfType<LevelManager>().RespawnPlayer();
+        }
+        else
+        {
+            Ani.SetTrigger("GetHurt");
+        }
+            if (this.lives == 0 && this.health == 0)
             {
                 Debug.Log("Gameover");
-                AudioManager.instance.playSingle(gameOverSound);
-                AudioManager.instance.musicSource.Stop();
-                Destroy(this.gameObject);
-                //(new navigationController()).goToGameOverScene();
-            }
+            //AudioManager.instance.playSingle(gameOverSound);
+            AudioManager.instance.playSingle(Die);
+            AudioManager.instance.musicSource.Stop();
+            Ani.SetTrigger("Die");
+            this.isDied = true;
+            //Destroy(this.gameObject);
+            //(new navigationController()).goToGameOverScene();
+        }
             Debug.Log("Player Health: " + this.health.ToString());
             Debug.Log("Player Lives: " + this.lives.ToString());
-        }
-        PlayHitReaction();
+            PlayHitReaction();
     }
     void Update () {
-        if (this.inImmune == true)
-        {
-            spriteFlicker();
-            immunityTime = immunityTime + Time.deltaTime;
-            if (immunityTime >= immunityDuration)
-            {
-                this.inImmune = false;
-                this.spriteRenderer.enabled = true;
-            }
-        }
-        scoreUI.text = "" + coinsCollected;
-        healthUI.value = health;
+       
+        //scoreUI.text = "" + coinsCollected;
+        //healthUI.value = health;
     }
     public void collectCoin(int coinValue)
     {
         this.coinsCollected = this.coinsCollected + coinValue;
+        print(this.coinsCollected);
     }
 }
