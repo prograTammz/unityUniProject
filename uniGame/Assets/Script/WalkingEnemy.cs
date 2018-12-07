@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WalkingEnemy : enemyController {
 
-    public AudioClip Die;
+    
     void Start()
     {
 
@@ -22,6 +22,7 @@ public class WalkingEnemy : enemyController {
         }
         if (collision.tag == "Player")
         {
+            print("I can see the player");
             FindObjectOfType<PlayerStats>().takeDamage(damage);
             AniController.SetTrigger("Hit");
             flip();
