@@ -9,9 +9,15 @@ public class Spikes : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D Other)
     {
         if (Other.tag == "Player")
+        {
             FindObjectOfType<PlayerStats>().takeDamage(damage);
             FindObjectOfType<LevelManager>().RespawnPlayer();
+        }
+<<<<<<< HEAD
+=======
             
+            
+>>>>>>> 6e33dc7f6aab3203e6962b04f162470ed1c878f8
     }
     void Start ()
     {
