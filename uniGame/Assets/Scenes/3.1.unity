@@ -1168,6 +1168,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4751420297314004, guid: b8b3c490f21c87345a2f86d0e594c439,
     type: 2}
   m_PrefabInternal: {fileID: 270749574}
+--- !u!1 &303093242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1350744025420744, guid: f8a4c33f7dc883f43bf22804f565a352,
+    type: 2}
+  m_PrefabInternal: {fileID: 194303146}
+--- !u!114 &303093246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 303093242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8b4e44b981e284385943ce6472d6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enm: {fileID: 0}
 --- !u!1 &329605291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,7 +1834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFacingRight: 1
   maxSpeed: 3
-  damage: 6
+  damage: 2
   isDied: 0
   health: 0
   Die: {fileID: 8300000, guid: 16f292e7f2caa894b8d17d2bed68f433, type: 3}
@@ -1825,7 +1842,6 @@ MonoBehaviour:
   run: {fileID: 597497161}
   dash: {fileID: 597497161}
   AniController: {fileID: 597497161}
-  Die: {fileID: 8300000, guid: 16f292e7f2caa894b8d17d2bed68f433, type: 3}
 --- !u!95 &597497161 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95545764760682226, guid: 558f186ccc254ad45b35c004e7a4dc35,
@@ -2165,7 +2181,6 @@ MonoBehaviour:
   immunityDuration: 1.5
   coinsCollected: 0
   gameOverSound: {fileID: 0}
-  isDied: 0
   scoreUI: {fileID: 0}
   healthUI: {fileID: 0}
   Ani: {fileID: 1795609453}
@@ -2521,6 +2536,10 @@ Prefab:
         type: 2}
       propertyPath: m_BodyType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957380927392158, guid: 558f186ccc254ad45b35c004e7a4dc35, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 558f186ccc254ad45b35c004e7a4dc35, type: 2}
