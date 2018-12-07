@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 178849819}
   m_Layer: 0
   m_Name: Hip_wear
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4374,7 +4374,7 @@ Prefab:
     - target: {fileID: 61315682985317000, guid: 4850f95441ea5204cbfe92ff20531b94,
         type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50536160580237998, guid: 4850f95441ea5204cbfe92ff20531b94,
         type: 2}
@@ -4942,7 +4942,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1830928697}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8374e8d12b35a9a44a24db511e0ade05, type: 3}
   m_Name: 
@@ -4955,8 +4955,8 @@ MonoBehaviour:
   gameOverSound: {fileID: 0}
   scoreUI: {fileID: 0}
   healthUI: {fileID: 0}
-  Ani: {fileID: 0}
-  Die: {fileID: 0}
+  Ani: {fileID: 1890468164}
+  Die: {fileID: 8300000, guid: 16f292e7f2caa894b8d17d2bed68f433, type: 3}
 --- !u!1001 &1853699901
 Prefab:
   m_ObjectHideFlags: 0
@@ -5071,7 +5071,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1890468163}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8374e8d12b35a9a44a24db511e0ade05, type: 3}
   m_Name: 
