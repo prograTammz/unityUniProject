@@ -980,6 +980,68 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a4c33f7dc883f43bf22804f565a352, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &254938531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 254938534}
+  - component: {fileID: 254938533}
+  - component: {fileID: 254938532}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &254938532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254938531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &254938533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254938531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &254938534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254938531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &262648250
 Prefab:
   m_ObjectHideFlags: 0
@@ -1323,6 +1385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4938c0c0c0e70a48b354f8d5e4514db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 6
 --- !u!61 &471879217
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1755,10 +1818,14 @@ MonoBehaviour:
   isFacingRight: 1
   maxSpeed: 3
   damage: 6
+  isDied: 0
+  health: 0
+  Die: {fileID: 8300000, guid: 16f292e7f2caa894b8d17d2bed68f433, type: 3}
   idle: {fileID: 597497161}
-  run: {fileID: 0}
-  dash: {fileID: 0}
-  AniController: {fileID: 0}
+  run: {fileID: 597497161}
+  dash: {fileID: 597497161}
+  AniController: {fileID: 597497161}
+  Die: {fileID: 8300000, guid: 16f292e7f2caa894b8d17d2bed68f433, type: 3}
 --- !u!95 &597497161 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95545764760682226, guid: 558f186ccc254ad45b35c004e7a4dc35,
@@ -1991,6 +2058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4938c0c0c0e70a48b354f8d5e4514db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 6
 --- !u!61 &806506082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2097,8 +2165,11 @@ MonoBehaviour:
   immunityDuration: 1.5
   coinsCollected: 0
   gameOverSound: {fileID: 0}
+  isDied: 0
   scoreUI: {fileID: 0}
   healthUI: {fileID: 0}
+  Ani: {fileID: 1795609453}
+  Die: {fileID: 8300000, guid: 16f292e7f2caa894b8d17d2bed68f433, type: 3}
 --- !u!1 &937387020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3772,6 +3843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4938c0c0c0e70a48b354f8d5e4514db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 6
 --- !u!61 &1162852857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4088,6 +4160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4938c0c0c0e70a48b354f8d5e4514db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 6
 --- !u!61 &1223082861
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4442,6 +4515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4938c0c0c0e70a48b354f8d5e4514db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 6
 --- !u!61 &1453643590
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4882,6 +4956,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4961243305158150, guid: 71cce0e18cda5cf41922fd12f108ed51,
     type: 2}
   m_PrefabInternal: {fileID: 1707264433}
+--- !u!95 &1795609453 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95553249904935594, guid: f8a4c33f7dc883f43bf22804f565a352,
+    type: 2}
+  m_PrefabInternal: {fileID: 194303146}
 --- !u!1 &1801792128
 GameObject:
   m_ObjectHideFlags: 0
@@ -4911,6 +4990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4938c0c0c0e70a48b354f8d5e4514db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 6
 --- !u!61 &1801792130
 BoxCollider2D:
   m_ObjectHideFlags: 0
