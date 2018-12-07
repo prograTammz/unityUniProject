@@ -15554,16 +15554,6 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1086806191062818, guid: f8a4c33f7dc883f43bf22804f565a352, type: 2}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000,
-        type: 0}
-    - target: {fileID: 50745563887650092, guid: f8a4c33f7dc883f43bf22804f565a352,
-        type: 2}
-      propertyPath: m_Simulated
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a4c33f7dc883f43bf22804f565a352, type: 2}
   m_IsPrefabAsset: 0

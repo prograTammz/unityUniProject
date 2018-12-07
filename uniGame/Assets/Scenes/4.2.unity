@@ -895,8 +895,6 @@ MonoBehaviour:
   isFacingRight: 1
   maxSpeed: 1
   damage: 6
-  isDied: 0
-  health: 0
   idle: {fileID: 0}
   run: {fileID: 0}
   dash: {fileID: 0}
@@ -1152,11 +1150,6 @@ Prefab:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 8300000, guid: 0bab2f9cb0895bd43aa897260cea64bf, type: 3}
-    - target: {fileID: 1086806191062818, guid: f8a4c33f7dc883f43bf22804f565a352, type: 2}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000,
-        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a4c33f7dc883f43bf22804f565a352, type: 2}
   m_IsPrefabAsset: 0
