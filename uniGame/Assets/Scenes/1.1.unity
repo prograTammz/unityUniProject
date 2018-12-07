@@ -132,11 +132,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4559340329023654, guid: 085a6297046e59849989d0bfef08dadf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.221
+      value: 4.81
       objectReference: {fileID: 0}
     - target: {fileID: 4559340329023654, guid: 085a6297046e59849989d0bfef08dadf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.053
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4559340329023654, guid: 085a6297046e59849989d0bfef08dadf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -986,7 +986,7 @@ GameObject:
   m_Layer: 0
   m_Name: checkpoint (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5193,7 +5193,7 @@ GameObject:
   m_Layer: 0
   m_Name: checkpoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

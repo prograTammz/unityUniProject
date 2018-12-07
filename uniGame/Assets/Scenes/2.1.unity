@@ -3250,6 +3250,7 @@ GameObject:
   - component: {fileID: 227403694}
   - component: {fileID: 227403695}
   - component: {fileID: 227403696}
+  - component: {fileID: 227403697}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -3317,6 +3318,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 6
+--- !u!61 &227403697
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227403693}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &236622495
 GameObject:
   m_ObjectHideFlags: 0
@@ -11982,6 +12008,27 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 95545764760682226, guid: 558f186ccc254ad45b35c004e7a4dc35,
     type: 2}
   m_PrefabInternal: {fileID: 870911661}
+--- !u!114 &870911670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870911662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22832b220753734dbd983c78f288cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFacingRight: 0
+  maxSpeed: 3
+  damage: 6
+  isDied: 0
+  health: 6
+  Die: {fileID: 0}
+  idle: {fileID: 870911665}
+  run: {fileID: 0}
+  dash: {fileID: 0}
+  AniController: {fileID: 870911665}
 --- !u!114 &870911671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13425,7 +13472,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 997726008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.37, y: 3.86, z: 0}
+  m_LocalPosition: {x: 5.1, y: 6.33, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14784,6 +14831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1075162847}
+  - component: {fileID: 1075162848}
   m_Layer: 0
   m_Name: CheckPoint2
   m_TagString: Untagged
@@ -14804,6 +14852,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1075162848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1075162846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6f33cdc17032c439904c7376c750d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1075244684
 GameObject:
   m_ObjectHideFlags: 0
@@ -15944,6 +16003,7 @@ GameObject:
   - component: {fileID: 1232464570}
   - component: {fileID: 1232464569}
   - component: {fileID: 1232464568}
+  - component: {fileID: 1232464571}
   m_Layer: 0
   m_Name: Water (1)
   m_TagString: Untagged
@@ -16011,6 +16071,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1232464571
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232464567}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1233094848
 Prefab:
   m_ObjectHideFlags: 0
