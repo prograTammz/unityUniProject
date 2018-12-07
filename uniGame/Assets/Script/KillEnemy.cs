@@ -6,7 +6,7 @@ public class KillEnemy : MonoBehaviour
 {
 
     public GameObject enm;
-
+    private int scene4Counter = 0;
     // Use this for initialization
     void Start()
     {
@@ -18,6 +18,18 @@ public class KillEnemy : MonoBehaviour
         if (X.tag == "Enemy")
         {
             FindObjectOfType<WalkingEnemy>().takeDamage(6);
+            if (X.name == "knightScene4" || X.name == "knightScene4(Clone)")
+            {
+                scene4Counter++;
+                if(scene4Counter == 10)
+                {
+
+                }
+            }
+            else if (X.name == "Hendrick - prefab")
+            {
+                (new navigationController()).goToVictoryScene();
+            }
         }
     }
 

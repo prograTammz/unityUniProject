@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy_spawns : enemyController {
 
-	// Use this for initialization
+    // Use this for initialization
+    private int Counter = 0;
 	void Start () {
 		
 	}
@@ -14,8 +15,9 @@ public class Enemy_spawns : enemyController {
 		
 	}
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.tag=="Player"){
+		if(other.tag=="Player" & Counter <=10 ){
 FindObjectOfType<LevelManager>().RespawnEnemy();
+            Counter++;
 		}
 	}
 }

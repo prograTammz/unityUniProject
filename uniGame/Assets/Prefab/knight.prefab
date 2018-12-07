@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61183173320557644}
   - component: {fileID: 50136692140748902}
   - component: {fileID: 95545764760682226}
+  - component: {fileID: 114126603047066892}
   m_Layer: 0
   m_Name: knight
   m_TagString: Untagged
@@ -106,6 +107,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114126603047066892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957380927392158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c5b5457294562478d24ef9e507ef03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFacingRight: 0
+  maxSpeed: 3
+  damage: 6
+  isDied: 0
+  health: 0
+  Die: {fileID: 0}
+  idle: {fileID: 95545764760682226}
+  run: {fileID: 0}
+  dash: {fileID: 0}
+  AniController: {fileID: 95545764760682226}
 --- !u!212 &212098615709569350
 SpriteRenderer:
   m_ObjectHideFlags: 1

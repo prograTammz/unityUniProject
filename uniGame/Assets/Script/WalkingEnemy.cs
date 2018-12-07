@@ -24,6 +24,7 @@ public class WalkingEnemy : enemyController {
         {
             print("I can see the player");
             FindObjectOfType<PlayerStats>().takeDamage(damage);
+            
             AniController.SetTrigger("Hit");
             flip();
         }
