@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class level_transiion3to4 : MonoBehaviour {
+public class LevelSwitching : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,11 +13,8 @@ public class level_transiion3to4 : MonoBehaviour {
 	void Update () {
 		
 	}
-	 void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D()
     {
-        if (other.tag == "Player")
-        {
-         (new navigationController()).goLevel(3);
-        }
+        (new navigationController()).goLevel(2);
     }
 }

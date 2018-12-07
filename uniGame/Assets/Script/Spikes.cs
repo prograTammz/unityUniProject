@@ -12,6 +12,7 @@ public class Spikes : MonoBehaviour {
         {
             FindObjectOfType<PlayerStats>().takeDamage(damage);
             FindObjectOfType<LevelManager>().RespawnPlayer();
+            
         }
 //<<<<<<< HEAD
 
