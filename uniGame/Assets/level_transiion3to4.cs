@@ -17,7 +17,7 @@ public class level_transiion3to4 : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-         (new navigationController()).goLevel(4);
+         (new navigationController()).goLevel(3);
         }
     }
 }
