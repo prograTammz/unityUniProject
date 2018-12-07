@@ -30,8 +30,10 @@ public class KillEnemy : MonoBehaviour
             {
                 (new navigationController()).goToVictoryScene();
             }
+            
         }
     }
+    
 
     // Update is called once per frame
     void Update()
