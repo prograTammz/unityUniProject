@@ -15,6 +15,6 @@ public class LevelSwitching : MonoBehaviour {
 	}
     void OnTriggerEnter2D()
     {
-        (new navigationController()).goLevel(3);
+        (new navigationController()).goLevel(2);
     }
 }
