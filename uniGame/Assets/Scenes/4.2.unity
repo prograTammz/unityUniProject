@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 178849819}
   m_Layer: 0
   m_Name: Hip_wear
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5022,6 +5022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1890468165}
   - component: {fileID: 1890468164}
+  - component: {fileID: 1890468166}
   m_Layer: 0
   m_Name: BURLY-MAN_1_swordsman_model
   m_TagString: Player
@@ -5064,15 +5065,13 @@ Transform:
   m_Father: {fileID: 1830928701}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!114 &1890468166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1890468163}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8374e8d12b35a9a44a24db511e0ade05, type: 3}
   m_Name: 
@@ -5087,7 +5086,6 @@ MonoBehaviour:
   healthUI: {fileID: 0}
   Ani: {fileID: 1890468164}
   Die: {fileID: 8300000, guid: 16f292e7f2caa894b8d17d2bed68f433, type: 3}
->>>>>>> 3b15dff875c6fe770f889727e9428c17bcf2a102
 --- !u!1001 &1896563031
 Prefab:
   m_ObjectHideFlags: 0
