@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class navigationController : MonoBehaviour {
-    public void goToIntroScene()
+    public void goLevel(int level)
     {
-        Application.LoadLevel(0);
+        Application.LoadLevel(level);
     }
 
     public void goToGameScene()
