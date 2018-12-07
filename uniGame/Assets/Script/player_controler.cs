@@ -43,7 +43,7 @@ public class player_controler : MonoBehaviour {
 				flip();
 				isFacingRight=false;
 			}
-            //AudioManager.instance.playSingle(walkSound);
+            AudioManager.instance.playSingle(walkSound);
 		}
 		if (Input.GetKey(R) & !GetComponent<PlayerStats>().isDied)
         {
@@ -52,7 +52,7 @@ public class player_controler : MonoBehaviour {
 				flip();
 				isFacingRight=true;
 			}
-            //AudioManager.instance.playSingle(walkSound);
+            AudioManager.instance.playSingle(walkSound);
         }
         if (Input.GetKey(F) & !GetComponent<PlayerStats>().isDied)
         {

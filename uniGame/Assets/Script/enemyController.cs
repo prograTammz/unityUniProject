@@ -9,6 +9,7 @@ public class enemyController : MonoBehaviour {
     public int damage = 6;
     public bool isDied=false;
     public int health = 0;
+    public AudioClip Die;
     //public AudioClip hit1;
     //public AudioClip hit2;
     public Animator idle, run, dash;
@@ -47,6 +48,7 @@ public class enemyController : MonoBehaviour {
         {
             //Destroy(this.gameObject);
             idle.SetTrigger("Die");
+            AudioManager.instance.playSingle(Die);
             this.isDied = true;
         }
     }

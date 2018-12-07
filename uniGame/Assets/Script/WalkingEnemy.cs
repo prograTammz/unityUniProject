@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WalkingEnemy : enemyController {
 
+    public AudioClip Die;
     void Start()
     {
 
