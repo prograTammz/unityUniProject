@@ -51,7 +51,7 @@ public class PlayerStats : MonoBehaviour {
             if (this.health < 0) this.health = 0;
             if (this.lives > 0 && this.health == 0)
             {
-                //FindObjectOfType<LevelManager>().RespawnPlayer();
+                 FindObjectOfType<LevelManager>().RespawnPlayer();
                 this.health = 6;
                 this.lives--;
             }

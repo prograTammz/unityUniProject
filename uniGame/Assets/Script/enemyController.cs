@@ -22,10 +22,7 @@ public class enemyController : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-
-
             FindObjectOfType<PlayerStats>().takeDamage(damage);
-
         }
     }
 
